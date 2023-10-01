@@ -1,15 +1,10 @@
 function titleCase(phrase) {
-  phrase.split('');
-  console.log(phrase)
-  for (let i = 0; i < phrase.length; i++) {
-    phrase[i].toLowerCase();
-    console.log(phrase)
-    const letters = phrase.split('')
-    console.log(letters)
-    phrase[i] = letters[0].toUpperCase();
-    console.log(phrase)
+  const wordArray = phrase.toLowerCase().split(' ');
+  for (let i = 0; i < wordArray.length; i++) {
+    wordArray[i] = wordArray[i][0].toUpperCase() + wordArray[i].slice(1);
+    console.log(wordArray[i]);
   }
-  return phrase
+  return wordArray.join(' ');
 }
 
 module.exports = titleCase;
