@@ -10,6 +10,6 @@
 
 const countOccurrences = (inputString, charToSearch) => {
   return inputString.split(charToSearch).length - 1;
-}
+};
 
 module.exports = countOccurrences;
